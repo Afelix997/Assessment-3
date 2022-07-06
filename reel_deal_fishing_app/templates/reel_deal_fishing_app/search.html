@@ -1,0 +1,13 @@
+{%extends "reel_deal_fishing_app/layout.html"%}
+{% block scripts %}
+<script src="/static/js/main.js" defer></script>
+{% endblock %}
+{%block content%}
+<div class="container search">
+    <form id="search-form" class="search">
+        <label for="product">What are you looking for?</label>
+        <input value="" autofocus id="product">
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>
+{%endblock%}

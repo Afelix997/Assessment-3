@@ -1,0 +1,23 @@
+{%extends "reel_deal_fishing_app/layout.html"%}
+
+{%block content%}
+<div class="container prod_box">
+    <div class="prod_name"> Nets</div> 
+    {% for item in products %} 
+    <div class="container prod_row">
+        <div class="row">
+          <div class="col">
+            <img src="{{item.img}}" class="img-thumbnail" alt="img">
+          </div>
+          <div class="col prod">
+           <h3>{{item.name}}</h3><br>
+           <h4>{{item.price}}</h4> 
+          </div>
+          <div class="col prod">
+            <button type="button" class="btn btn-warning">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+{%endblock%}

@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap');
+
+
+body{
+    text-align: center;
+    background-color: #FFE197;      
+      
+}
+.nav-item{
+    padding-left: 100px;
+}
+.index{
+    font-size: 2rem;
+    position: relative;
+    justify-content:center;
+    text-align: center; 
+   
+}
+.intro{
+margin-top: 100px;
+margin-bottom: 200px;
+}
+.text{
+    
+        border-style: inset;
+        border-width: 7px;
+        border-color: coral;
+        
+}
+.footer {
+    background-color: #5C6A6B;
+    position: fixed;
+    padding: 20px 10px 20px 10px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 200px;
+    text-align: center;
+ }
+ .prod_box{
+    border-radius: 2%;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    padding: 150px;
+    background-color: beige;
+ }
+ .img-thumbnail{
+    width: 200px;
+    height: 200px;
+ }
+ .prod_row{
+    padding: 10px;
+    border-radius: 1%;
+    background-color: aqua;
+    margin:20px;
+ }
+ .prod_name{
+    text-decoration: underline;
+    font-size: 4rem;
+    font-family: 'Arima', cursive;
+    text-align: center;
+    margin-top: -50;
+    padding-bottom: 40px;
+ }
+ .prod{
+    text-align: center;
+    margin: auto;
+ }
+ img{
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+ }
+ 
+ form{
+    margin-top: 100px;
+ }
