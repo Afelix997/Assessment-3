@@ -16,55 +16,64 @@ items=(
         'name':'Can o\' Worms',
         'price':'2',
         'img':'/static/images/bait_1.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 2
     },{
         'item_id': '2',
         'name':'Lil Guppy',
         'price':'5',
         'img':'/static/images/bait_2.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 5
     },{
         'item_id': '3',
         'name':'Squidward',
         'price':'10',
         'img':'/static/images/bait_3.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 10
     },{
         'item_id': '4',
         'name':'Reelomatic',
         'price':'40',
         'img':'/static/images/rod_3.png',
-        'cart': 1
+        'cart': 1,
+        'sub': 40
     },{
         'item_id': '5',
         'name':'Fishotron 2.0',
         'price':'200',
         'img':'/static/images/rod_2.png',
-        'cart': 1
+        'cart': 1,
+        'sub': 200
     },{
         'item_id': '6',
         'name':'Fishinater 3000',
         'price':'5000',
         'img':'/static/images/rod_1.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 5000
     },{
         'item_id': '7',
         'name':'Fish Basket',
         'price':'8',
         'img':'/static/images/net_1.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 8
     },{
         'item_id': '8',
         'name':'Fish Net',
         'price':'10',
         'img':'/static/images/net_2.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 10
     },{
         'item_id': '9',
         'name':'Cooler Fish Net',
         'price':'12',
         'img':'/static/images/net_3.jfif',
-        'cart': 1
+        'cart': 1,
+        'sub': 12
     }
 )
 
@@ -124,7 +133,8 @@ def cart(request):
             else:
                 for cart_item in cart_items:
                     if cart_item['item_id'] == purchase:
-                        cart_item['cart'] += 1                  
+                        cart_item['cart'] += 1
+                        cart_item['sub']+= int(cart_item['price'])              
 
     data= {'cart':cart_items, 'total':cart_total['total']}  
         
