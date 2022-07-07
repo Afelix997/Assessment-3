@@ -40,7 +40,7 @@ items=(
         'name':'Fishotron 2.0',
         'price':'200',
         'img':'/static/images/rod_2.png',
-        'cart': 0
+        'cart': 1
     },{
         'item_id': '6',
         'name':'Fishinater 3000',
