@@ -1,15 +1,10 @@
 document.getElementById('search-form').addEventListener('submit', (event)=>{
     event.preventDefault()
-
     const searchInput = document.getElementById('product')
-
-    // send a GET request to /products on our server, passing searchInput.value as data.
     axios.get('/products', {params:{query: searchInput.value}})
-
-    // handle the response from the server
         .then((response) => {
         
-            if (searchInput.value == 'bait' || searchInput.value == 'fishing rods' || searchInput.value == 'fishing nets') {
+            if (searchInput.value == 'bait' || searchInput.value == 'fishing rod' || searchInput.value == 'fishing net') {
                 const inStock = document.createElement('h1')
                 inStock.innerText = `That item is in stock!`
                 document.body.appendChild(inStock)
@@ -27,5 +22,4 @@ document.getElementById('search-form').addEventListener('submit', (event)=>{
 
             }
         })
-    // console.log(searchInput.value)
 })

@@ -11,10 +11,13 @@
           </div>
           <div class="col prod">
            <h3>{{item.name}}</h3><br>
-           <h4>{{item.price}}</h4> 
+           <h4>${{item.price}}.00</h4> 
           </div>
           <div class="col prod">
-            <button type="button" class="btn btn-warning">ADD TO CART</button>
+            <form action="/cart/" method="POST" id="shop">
+              {% csrf_token %}
+              <button type="submit" name = 'purchase' value="{{item.item_id}}" form="shop" class="btn btn-warning">ADD TO CART</button>
+            </form>
           </div>
         </div>
       </div>

@@ -1,7 +1,31 @@
 {%extends "reel_deal_fishing_app/layout.html"%}
 
 {%block content%}
+
+<div></div>
 <div class="container prod_box">
     
+    <h1>Items in Cart</h1>
+    <br><br>
+    {% for item in cart %}
+    <div class="container prod_row">
+        <div class="row">
+          <div class="col">
+            <img src="{{item.img}}" class="img-thumbnail" alt="img">
+          </div>
+          <div class="col prod">
+           <h2>{{item.name}}</h2><br>
+           <h4>${{item.price}}.00</h4>
+          </div>
+          <div class="col prod">
+            <h3>x{{item.cart}}</h3> 
+              
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <h1> TOTAL PRICE = ${{total}}.00</h1>
 </div>
 {%endblock%}
+
+
